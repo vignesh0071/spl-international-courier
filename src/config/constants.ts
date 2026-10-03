@@ -4,7 +4,7 @@
 export const WHATSAPP_NUMBER = "919894590600"; // Official WhatsApp number
 
 export const COMPANY_CONFIG = {
-  name: "SPL International Courier Solution",
+  name: "SPL Worldwide Express",
   brandName: "SPL Worldwide Express",
   tagline: "International Courier Solution",
   originCity: "Thoothukudi",

@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal, onViewServices }
             >
               <img
                 src="/images/spl-hero-logistics.jpg"
-                alt="SPL International Courier Solution cargo aircraft, courier van, worker, and parcels"
+                alt="SPL Worldwide Express courier parcel delivery and cargo shipment handling in Thoothukudi"
                 className="w-full h-full object-cover object-[right_35%] xl:object-[right_36%] filter brightness-[1.01] contrast-[1.02]"
                 loading="eager"
               />
@@ -96,11 +96,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal, onViewServices }
               {/* Hero Supporting Copy: Natural, professional business writing */}
               <div className="space-y-3 font-body text-slate-700 text-[15.5px] sm:text-[16px] xl:text-[16.5px] leading-[1.65] max-w-[590px] mb-6">
                 <p>
-                  From urgent documents leaving Thoothukudi (Tuticorin) to express parcels and commercial cargo,{' '}
-                  <strong className="font-semibold text-spl-navy-deep">SPL International Courier</strong> provides fast doorstep pickup, careful handling, and dependable domestic and international courier delivery.
+                  <strong className="font-semibold text-spl-navy-deep">SPL Worldwide Express</strong> is a professional courier service in Thoothukudi, Tamil Nadu, providing reliable domestic and international courier solutions for documents, parcels, personal shipments, and business consignments.
                 </p>
                 <p className="text-slate-600 text-[14.5px] sm:text-[15px]">
-                  Leading courier service in Thoothukudi and Tuticorin — connecting south Tamil Nadu with pan-India parcel delivery and worldwide express shipping.
+                  Cost-effective domestic shipping across India and international courier services from Thoothukudi through established logistics networks.
                 </p>
               </div>
 

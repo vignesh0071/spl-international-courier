@@ -58,10 +58,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
     <div className="w-full bg-white text-spl-navy-deep min-h-screen flex flex-col">
       {/* Dynamic SEO Meta & Structured Data */}
       <SEOHead
-        title="Contact SPL Courier Thoothukudi | Courier Office & Dispatch Hub Tuticorin"
-        description="Contact SPL International Courier in Thoothukudi (Tuticorin), Tamil Nadu. Call +91 98945 90600 or WhatsApp for express parcel pickup, international shipping rates, and dispatch support."
+        title="Courier Office in Thoothukudi | SPL Worldwide Express Contact"
+        description="Contact SPL Worldwide Express in Thoothukudi for domestic and international courier services, parcel shipments, pickup coordination and enquiries."
         canonicalPath="/contact"
-        keywords="spl courier thoothukudi, courier service tuticorin, courier near me thoothukudi, courier near me tuticorin, courier office thoothukudi, courier pickup service thoothukudi, spl international courier contact"
+        keywords="courier office in thoothukudi, courier service thoothukudi, parcel office thoothukudi, courier near me thoothukudi, courier pickup thoothukudi, spl worldwide express contact"
         breadcrumbs={[
           { name: 'Home', item: '/' },
           { name: 'Contact', item: '/contact' },
@@ -70,12 +70,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({
           '@type': 'ContactPage',
           '@id': 'https://splexpress.in/contact#webpage',
           'url': 'https://splexpress.in/contact',
-          'name': 'Contact SPL International Courier Thoothukudi',
-          'description': 'Contact SPL International Courier in Thoothukudi (Tuticorin), Tamil Nadu. Direct phone +91 98945 90600, WhatsApp booking, and courier office address.',
+          'name': 'Contact SPL Worldwide Express Thoothukudi',
+          'description': 'Contact SPL Worldwide Express in Thoothukudi, Tamil Nadu for domestic and international courier services, parcel shipments, pickup coordination and enquiries.',
           'mainEntity': {
             '@type': 'CourierService',
-            'name': 'SPL International Courier',
-            'alternateName': ['SPL Worldwide Express', 'SPL Courier Thoothukudi', 'SPL Courier Tuticorin'],
+            'name': 'SPL Worldwide Express',
+            'alternateName': ['SPL Worldwide Express', 'SPL Courier Thoothukudi'],
             'telephone': '+919894590600',
             'email': 'ind.splogistics@gmail.com',
             'address': {
@@ -86,17 +86,15 @@ export const ContactPage: React.FC<ContactPageProps> = ({
               'postalCode': '628001',
               'addressCountry': 'IN',
             },
-            'geo': {
-              '@type': 'GeoCoordinates',
-              'latitude': 8.7642,
-              'longitude': 78.1348,
-            },
             'openingHoursSpecification': {
               '@type': 'OpeningHoursSpecification',
               'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
               'opens': '10:00',
               'closes': '22:00',
             },
+            'sameAs': [
+              'https://maps.app.goo.gl/DDnbJCcJZ99QLiQ46'
+            ],
           },
         }}
       />
@@ -398,16 +396,33 @@ export const ContactPage: React.FC<ContactPageProps> = ({
               </div>
             </div>
 
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <div className="pt-2 flex flex-wrap items-center gap-3">
               <a
                 href={COMPANY_CONFIG.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-[4px] bg-spl-navy-deep text-white hover:bg-spl-navy-secondary font-heading font-bold text-[13px] uppercase tracking-wider transition-colors shadow-2xs"
               >
-                <span>OPEN IN GOOGLE MAPS</span>
+                <span>GET DIRECTIONS</span>
                 <ExternalLink className="w-3.5 h-3.5 text-spl-yellow stroke-[2.5]" />
               </a>
+
+              <a
+                href={`tel:${COMPANY_CONFIG.primaryContactPhoneClean}`}
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-[4px] border border-slate-300 font-heading font-bold text-[13px] text-spl-navy-deep hover:bg-slate-50 transition-colors uppercase tracking-wider"
+              >
+                <PhoneCall className="w-3.5 h-3.5 text-spl-navy-deep" />
+                <span>CALL NOW</span>
+              </a>
+
+              <button
+                type="button"
+                onClick={handleWhatsAppClick}
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-[4px] bg-[#25D366] text-white hover:bg-[#128C7E] font-heading font-bold text-[13px] uppercase tracking-wider transition-colors cursor-pointer"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>WHATSAPP</span>
+              </button>
 
               <Button
                 variant="secondary"
@@ -416,7 +431,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                 icon={<ArrowUpRight className="w-4 h-4 stroke-[2.5]" />}
                 className="font-heading font-semibold justify-center"
               >
-                REQUEST PICKUP INSTEAD
+                REQUEST PICKUP
               </Button>
             </div>
           </div>
@@ -442,7 +457,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                 <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-[340px] bg-white/95 backdrop-blur-md p-3.5 rounded-lg border border-slate-200/90 shadow-md flex items-center justify-between gap-3">
                   <div className="min-w-0">
                     <p className="font-heading font-bold text-[12.5px] uppercase tracking-wide text-spl-navy-deep truncate">
-                      Thoothukudi Dispatch Hub
+                      SPL Worldwide Express Thoothukudi
                     </p>
                     <p className="font-body text-[11.5px] text-slate-500 truncate">
                       Tamil Nadu 628001, India
@@ -454,7 +469,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                     rel="noopener noreferrer"
                     className="shrink-0 px-3 py-1.5 rounded bg-spl-navy-deep text-white font-heading font-bold text-[11px] uppercase tracking-wider hover:bg-spl-navy-secondary transition-colors inline-flex items-center gap-1"
                   >
-                    <span>Directions</span>
+                    <span>Get Directions</span>
                     <ExternalLink className="w-3 h-3 text-spl-yellow" />
                   </a>
                 </div>

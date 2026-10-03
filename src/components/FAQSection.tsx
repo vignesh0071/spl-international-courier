@@ -10,27 +10,27 @@ export interface FAQItem {
 export const FAQS: FAQItem[] = [
   {
     question: "What courier services are available in Thoothukudi through SPL?",
-    answer: "SPL International Courier Solution provides comprehensive courier services in Thoothukudi (Tuticorin), including international air express delivery, domestic parcel shipping across India, urgent document couriers, commercial cargo dispatch, and convenient doorstep pickup coordination.",
+    answer: "SPL Worldwide Express provides comprehensive courier services in Thoothukudi, including international air courier delivery, domestic parcel shipping across India, document couriers, commercial consignments, and doorstep pickup coordination.",
   },
   {
     question: "Does SPL provide international courier services from Thoothukudi?",
-    answer: "Yes. SPL coordinates international express courier services from Thoothukudi to over 220 countries and territories worldwide, including the USA, UK, UAE (Dubai), Canada, Singapore, Australia, and European destinations, utilizing established global carrier networks such as DHL, UPS, FedEx, and Aramex.",
+    answer: "Yes. SPL Worldwide Express coordinates international courier services from Thoothukudi to overseas destinations worldwide, including the USA, UK, UAE, Canada, Singapore, Australia, and Europe, utilizing established international courier and logistics networks.",
   },
   {
     question: "Does SPL provide domestic courier services across India?",
-    answer: "Yes. We offer pan-India domestic parcel delivery connecting Thoothukudi with major metropolitan cities, Tier-2 hubs, and regional addresses across India. Services include document express, personal parcel delivery, and commercial packages with door-to-door options.",
+    answer: "Yes. We offer domestic parcel and document delivery connecting Thoothukudi with major cities and regional addresses across India, with reliable door-to-door transit options.",
   },
   {
     question: "Can I send documents and certificates through courier from Thoothukudi?",
-    answer: "Yes. We specialize in fast, secure document delivery for university certificates, legal records, commercial invoices, visa documents, and business contracts. All documents receive careful protective packaging and transit tracking.",
+    answer: "Yes. We handle fast, secure document delivery for university certificates, legal records, commercial papers, visa documents, and business contracts with protective packaging.",
   },
   {
     question: "Can I send parcels internationally from Thoothukudi?",
-    answer: "Yes. You can send personal parcels, gift items, commercial samples, and household goods internationally from our Thoothukudi counter or via doorstep pickup. We assist with packaging standards, weight verification, and required customs documentation.",
+    answer: "Yes. You can send personal parcels, gift packages, commercial samples, and household goods internationally from our Thoothukudi counter or via doorstep pickup, with packaging and customs documentation support.",
   },
   {
-    question: "How can I contact SPL International Courier Solution or book a pickup?",
-    answer: "You can reach our Thoothukudi dispatch office directly by phone at +91 98945 90600, chat with us on WhatsApp for instant rate guidance and pickup booking, or visit our central counter at Q4WW+RMQ, Thoothukudi, Tamil Nadu 628001 during operating hours (10:00 AM – 10:00 PM every day).",
+    question: "How can I contact SPL Worldwide Express or book a pickup?",
+    answer: "You can reach our Thoothukudi courier office directly by phone at +91 98945 90600, chat with us on WhatsApp for rate guidance and pickup booking, or visit our counter at Q4WW+RMQ, Thoothukudi, Tamil Nadu 628001 during operating hours (10:00 AM – 10:00 PM every day).",
   },
 ];
 

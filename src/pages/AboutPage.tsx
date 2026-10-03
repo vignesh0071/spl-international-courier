@@ -61,10 +61,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({
     <div className="w-full bg-[#F8F7F2] text-spl-navy-deep min-h-screen flex flex-col">
       {/* Dynamic SEO Meta & Structured Data */}
       <SEOHead
-        title="About Us | Leading Courier Company in Thoothukudi (Tuticorin) - SPL Courier"
-        description="SPL International Courier is a trusted courier company in Thoothukudi (Tuticorin), Tamil Nadu. Pan-India domestic parcel delivery, international express shipping, and commercial logistics."
+        title="About SPL Worldwide Express | Thoothukudi Courier Service"
+        description="Learn about SPL Worldwide Express, a Thoothukudi courier service providing domestic and international shipment solutions for individuals and businesses."
         canonicalPath="/about"
-        keywords="courier company in thoothukudi, courier company tuticorin, spl courier thoothukudi, best courier service in thoothukudi, domestic courier tuticorin, international courier tuticorin, spl international courier thoothukudi"
+        keywords="about spl worldwide express, courier service in thoothukudi, courier company thoothukudi, spl courier thoothukudi, domestic courier thoothukudi, international courier thoothukudi"
         breadcrumbs={[
           { name: 'Home', item: '/' },
           { name: 'About Us', item: '/about' },
@@ -73,11 +73,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({
           '@type': 'AboutPage',
           '@id': 'https://splexpress.in/about#webpage',
           'url': 'https://splexpress.in/about',
-          'name': 'About SPL International Courier',
-          'description': 'Learn about SPL International Courier in Thoothukudi (Tuticorin), Tamil Nadu. Reliable domestic courier networks, international express shipping, and commercial logistics.',
+          'name': 'About SPL Worldwide Express',
+          'description': 'Learn about SPL Worldwide Express, a Thoothukudi courier service providing domestic and international shipment solutions for individuals and businesses.',
           'mainEntity': {
             '@type': 'CourierService',
-            'name': 'SPL International Courier',
+            'name': 'SPL Worldwide Express',
             'alternateName': ['SPL Worldwide Express', 'SPL Courier Thoothukudi'],
             'telephone': '+919894590600',
             'email': 'ind.splogistics@gmail.com',

@@ -76,10 +76,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
     <div className="w-full bg-[#F8F7F2] text-spl-navy-deep min-h-screen flex flex-col">
       {/* Dynamic SEO Meta & Structured Data */}
       <SEOHead
-        title="Courier Services in Thoothukudi | International & Domestic Parcel Delivery - SPL"
-        description="Comprehensive courier services in Thoothukudi (Tuticorin): international express shipping, domestic parcel delivery across India, urgent document courier, cargo forwarding, and free doorstep pickup."
+        title="Courier Services in Thoothukudi | SPL Worldwide Express"
+        description="Explore domestic and international courier services in Thoothukudi from SPL Worldwide Express, including documents, parcels, personal and business shipments."
         canonicalPath="/services"
-        keywords="courier services in thoothukudi, express courier service in thoothukudi, international courier service in thoothukudi, domestic courier service in thoothukudi, international parcel delivery thoothukudi, document courier service, courier pickup service thoothukudi, courier services in tuticorin"
+        keywords="courier services in thoothukudi, courier service thoothukudi, domestic courier thoothukudi, international courier thoothukudi, parcel delivery thoothukudi, document courier thoothukudi, courier pickup thoothukudi, spl worldwide express"
         breadcrumbs={[
           { name: 'Home', item: '/' },
           { name: 'Services', item: '/services' },
@@ -91,11 +91,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             'serviceType': 'International Express Courier',
             'provider': {
               '@type': 'CourierService',
-              'name': 'SPL International Courier',
+              'name': 'SPL Worldwide Express',
               'url': 'https://splexpress.in/',
             },
             'areaServed': 'Worldwide',
-            'description': 'Fast international air express courier services connecting Thoothukudi and Tuticorin with USA, UK, UAE, Canada, Australia, Singapore, and Europe.',
+            'description': 'International air courier services from Thoothukudi for documents and parcels to overseas destinations through established courier and logistics networks.',
           },
           {
             '@type': 'Service',
@@ -103,14 +103,14 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             'serviceType': 'Domestic Parcel Delivery',
             'provider': {
               '@type': 'CourierService',
-              'name': 'SPL International Courier',
+              'name': 'SPL Worldwide Express',
               'url': 'https://splexpress.in/',
             },
             'areaServed': {
               '@type': 'Country',
               'name': 'India',
             },
-            'description': 'Reliable domestic courier service from Thoothukudi across India with express door-to-door parcel delivery.',
+            'description': 'Reliable domestic courier service from Thoothukudi across India for documents and parcels with express door-to-door delivery.',
           },
           {
             '@type': 'Service',
@@ -118,11 +118,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             'serviceType': 'Doorstep Courier Collection',
             'provider': {
               '@type': 'CourierService',
-              'name': 'SPL International Courier',
+              'name': 'SPL Worldwide Express',
               'url': 'https://splexpress.in/',
             },
-            'areaServed': ['Thoothukudi', 'Tuticorin'],
-            'description': 'Free doorstep courier pickup and packaging coordination across Thoothukudi and Tuticorin for documents and parcels.',
+            'areaServed': 'Thoothukudi',
+            'description': 'Doorstep courier pickup and packaging coordination across Thoothukudi for documents, parcels, and business shipments.',
           },
           {
             '@type': 'FAQPage',

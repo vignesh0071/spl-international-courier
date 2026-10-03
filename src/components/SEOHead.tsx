@@ -79,7 +79,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     setMetaTag('property', 'og:url', canonicalUrl);
     setMetaTag('property', 'og:type', ogType);
     setMetaTag('property', 'og:image', ogImage);
-    setMetaTag('property', 'og:site_name', 'SPL International Courier Solution');
+    setMetaTag('property', 'og:site_name', 'SPL Worldwide Express');
     setMetaTag('property', 'og:locale', 'en_IN');
 
     // 5. Twitter Card Meta Tags
