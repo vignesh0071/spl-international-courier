@@ -20,6 +20,7 @@ import { Footer } from '../components/Footer';
 import { CourierLogosRow } from '../components/CourierLogos';
 import { COMPANY_CONFIG } from '../config/constants';
 import { SEOHead } from '../components/SEOHead';
+import { FAQSection, FAQS } from '../components/FAQSection';
 
 interface ServicesPageProps {
   onOpenBookingModal: (service?: string) => void;
@@ -32,6 +33,7 @@ const QUICK_NAV = [
   { id: "business-commercial", num: "03", label: "Business & Commercial" },
   { id: "documents-parcel", num: "04", label: "Documents & Parcel" },
   { id: "careful-handling", num: "05", label: "Careful Handling" },
+  { id: "faq", num: "06", label: "FAQ" },
 ];
 
 const PROCESS_STEPS = [
@@ -121,6 +123,17 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             },
             'areaServed': ['Thoothukudi', 'Tuticorin'],
             'description': 'Free doorstep courier pickup and packaging coordination across Thoothukudi and Tuticorin for documents and parcels.',
+          },
+          {
+            '@type': 'FAQPage',
+            'mainEntity': FAQS.map((faq) => ({
+              '@type': 'Question',
+              'name': faq.question,
+              'acceptedAnswer': {
+                '@type': 'Answer',
+                'text': faq.answer,
+              },
+            })),
           },
         ]}
       />
@@ -838,7 +851,12 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       </section>
 
       {/* ========================================================================= */}
-      {/* 11. FINAL SERVICES CTA */}
+      {/* 11. FREQUENTLY ASKED QUESTIONS (FAQ) */}
+      {/* ========================================================================= */}
+      <FAQSection onOpenBookingModal={() => onOpenBookingModal()} />
+
+      {/* ========================================================================= */}
+      {/* 12. FINAL SERVICES CTA */}
       {/* ========================================================================= */}
       <section className="w-full bg-white py-12 sm:py-16 lg:py-20 border-b border-spl-border/80">
         <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8 xl:px-12">

@@ -25,8 +25,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal, onOpenCo
     <div className="w-full flex flex-col">
       {/* Dynamic SEO Meta & Structured Data */}
       <SEOHead
-        title="SPL International Courier | Best Courier Service in Thoothukudi (Tuticorin)"
-        description="SPL International Courier is the trusted domestic and international courier service in Thoothukudi (Tuticorin). Express parcel delivery, document shipping, and doorstep pickup across India and worldwide."
+        title="SPL International Courier | Courier Service in Thoothukudi"
+        description="SPL International Courier Solution in Thoothukudi provides dependable domestic and international courier services for parcel and document delivery. Book your pickup today."
         canonicalPath="/"
         keywords="courier service in thoothukudi, courier services in thoothukudi, courier company in thoothukudi, best courier service in thoothukudi, international courier service in thoothukudi, domestic courier service in thoothukudi, express courier service in thoothukudi, courier service tuticorin, spl international courier, spl courier thoothukudi, parcel delivery thoothukudi"
       />
