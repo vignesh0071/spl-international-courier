@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Hero } from '../components/Hero';
 import { HeroServiceStrip } from '../components/HeroServiceStrip';
-import { LocalPresenceSection } from '../components/LocalPresenceSection';
 import { Footer } from '../components/Footer';
 import { SEOHead } from '../components/SEOHead';
 
@@ -40,13 +39,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal, onOpenCo
       {/* 2. Approved Service Strip */}
       <HeroServiceStrip />
 
-      {/* 3. SPL Worldwide Express in Thoothukudi - Local Presence Section */}
-      <LocalPresenceSection
-        onOpenBookingModal={onOpenBookingModal}
-        onOpenContactModal={onOpenContactModal}
-      />
-
-      {/* 4. Website Footer */}
+      {/* 3. Website Footer */}
       <Footer
         onOpenBookingModal={onOpenBookingModal}
         onOpenContactModal={onOpenContactModal}
