@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight, MapPin, Globe, ShieldCheck, Headphones, Anchor } from 'lucide-react';
 import { Button } from '../components/Button';
 import { Footer } from '../components/Footer';
+import { SEOHead } from '../components/SEOHead';
 
 interface AboutPageProps {
   onOpenBookingModal: () => void;
@@ -13,22 +14,22 @@ const CORE_STRENGTHS = [
   {
     icon: MapPin,
     title: "LOCAL EXPERTISE",
-    description: "Strong presence in Thoothukudi with an understanding of local pickup and dispatch requirements.",
+    description: "Strong presence in Thoothukudi and Tuticorin with local courier pickup and packing assistance.",
   },
   {
     icon: Globe,
     title: "NETWORK REACH",
-    description: "Supporting movement across India and international destinations through coordinated logistics connections.",
+    description: "Pan-India domestic parcel delivery and international express courier connections to 220+ countries.",
   },
   {
     icon: ShieldCheck,
     title: "CAREFUL HANDLING",
-    description: "Documents, parcels and commercial shipments are handled with attention to packaging, movement and delivery.",
+    description: "Urgent documents, parcels and commercial cargo handled with dedicated protection.",
   },
   {
     icon: Headphones,
     title: "CUSTOMER FOCUS",
-    description: "Clear communication and practical support from enquiry through shipment coordination.",
+    description: "Doorstep courier pickup coordination, prompt communication, and full shipment support.",
   },
 ];
 
@@ -58,6 +59,39 @@ export const AboutPage: React.FC<AboutPageProps> = ({
 
   return (
     <div className="w-full bg-[#F8F7F2] text-spl-navy-deep min-h-screen flex flex-col">
+      {/* Dynamic SEO Meta & Structured Data */}
+      <SEOHead
+        title="About Us | Leading Courier Company in Thoothukudi (Tuticorin) - SPL Courier"
+        description="SPL International Courier is a trusted courier company in Thoothukudi (Tuticorin), Tamil Nadu. Pan-India domestic parcel delivery, international express shipping, and commercial logistics."
+        canonicalPath="/about"
+        keywords="courier company in thoothukudi, courier company tuticorin, spl courier thoothukudi, best courier service in thoothukudi, domestic courier tuticorin, international courier tuticorin, spl international courier thoothukudi"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'About Us', item: '/about' },
+        ]}
+        structuredData={{
+          '@type': 'AboutPage',
+          '@id': 'https://splexpress.in/about#webpage',
+          'url': 'https://splexpress.in/about',
+          'name': 'About SPL International Courier',
+          'description': 'Learn about SPL International Courier in Thoothukudi (Tuticorin), Tamil Nadu. Reliable domestic courier networks, international express shipping, and commercial logistics.',
+          'mainEntity': {
+            '@type': 'CourierService',
+            'name': 'SPL International Courier',
+            'alternateName': ['SPL Worldwide Express', 'SPL Courier Thoothukudi'],
+            'telephone': '+919894590600',
+            'email': 'ind.splogistics@gmail.com',
+            'address': {
+              '@type': 'PostalAddress',
+              'streetAddress': 'Q4WW+RMQ',
+              'addressLocality': 'Thoothukudi',
+              'addressRegion': 'Tamil Nadu',
+              'postalCode': '628001',
+              'addressCountry': 'IN',
+            },
+          },
+        }}
+      />
       
       {/* ========================================================================= */}
       {/* 1. ABOUT HERO: LOCAL ROOTS & EDITORIAL COMPOSITION */}
@@ -133,10 +167,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({
               {/* Core Company Description */}
               <div className="space-y-3.5 sm:space-y-4 font-body text-slate-700 text-[14.5px] sm:text-[16px] leading-[1.68]">
                 <p>
-                  <strong className="font-semibold text-spl-navy-deep">SPL Worldwide Express</strong> is a courier and logistics company based in Thoothukudi, Tamil Nadu. We handle everything from important documents to commercial shipments, with a focus on careful handling, dependable movement and practical delivery support.
+                  <strong className="font-semibold text-spl-navy-deep">SPL International Courier (SPL Worldwide Express)</strong> is a trusted courier company based in Thoothukudi (Tuticorin), Tamil Nadu. We specialize in express document delivery, personal parcel shipping, and commercial cargo logistics with doorstep courier pickup and dedicated delivery support across India and worldwide.
                 </p>
                 <p className="text-slate-600 text-[14px] sm:text-[15.5px]">
-                  Our approach is simple: understand what needs to move, coordinate the right movement, and keep the customer informed throughout the process.
+                  Our approach is simple: understand what needs to move, coordinate the right domestic or international courier network, and keep the customer informed throughout the journey.
                 </p>
               </div>
 

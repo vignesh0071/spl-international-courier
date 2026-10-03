@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Hero } from '../components/Hero';
 import { HeroServiceStrip } from '../components/HeroServiceStrip';
 import { Footer } from '../components/Footer';
+import { SEOHead } from '../components/SEOHead';
 
 interface HomePageProps {
   onOpenBookingModal: () => void;
@@ -22,6 +23,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal, onOpenCo
 
   return (
     <div className="w-full flex flex-col">
+      {/* Dynamic SEO Meta & Structured Data */}
+      <SEOHead
+        title="SPL International Courier | Best Courier Service in Thoothukudi (Tuticorin)"
+        description="SPL International Courier is the trusted domestic and international courier service in Thoothukudi (Tuticorin). Express parcel delivery, document shipping, and doorstep pickup across India and worldwide."
+        canonicalPath="/"
+        keywords="courier service in thoothukudi, courier services in thoothukudi, courier company in thoothukudi, best courier service in thoothukudi, international courier service in thoothukudi, domestic courier service in thoothukudi, express courier service in thoothukudi, courier service tuticorin, spl international courier, spl courier thoothukudi, parcel delivery thoothukudi"
+      />
+
       {/* 1. Approved Hero Section */}
       <Hero
         onOpenBookingModal={onOpenBookingModal}

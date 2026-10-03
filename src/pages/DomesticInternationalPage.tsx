@@ -20,6 +20,7 @@ import { Button } from '../components/Button';
 import { Footer } from '../components/Footer';
 import { StickyStorySection } from '../components/StickyStorySection';
 import { WHATSAPP_NUMBER } from '../config/constants';
+import { SEOHead } from '../components/SEOHead';
 
 interface DomesticInternationalPageProps {
   onOpenBookingModal: (service?: string, destination?: string, requirement?: string) => void;
@@ -130,6 +131,46 @@ export const DomesticInternationalPage: React.FC<DomesticInternationalPageProps>
 
   return (
     <div className="w-full bg-white text-spl-navy-deep min-h-screen flex flex-col font-body selection:bg-spl-yellow selection:text-spl-navy-deep">
+      {/* Dynamic SEO Meta & Structured Data */}
+      <SEOHead
+        title="Domestic & International Courier Delivery | SPL Worldwide Express"
+        description="Seamless domestic parcel delivery across India and international courier solutions to global destinations from our central Thoothukudi dispatch hub."
+        canonicalPath="/domestic-international"
+        keywords="domestic courier services India, international parcel delivery, overseas express shipping, courier from Tamil Nadu, SPL Worldwide Express"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Domestic & International', item: '/domestic-international' },
+        ]}
+        structuredData={[
+          {
+            '@type': 'Service',
+            'name': 'Pan-India Domestic Parcel Express',
+            'serviceType': 'Domestic Courier',
+            'provider': {
+              '@type': 'CourierService',
+              'name': 'SPL International Courier Solution',
+              'url': 'https://splexpress.in/',
+            },
+            'areaServed': {
+              '@type': 'Country',
+              'name': 'India',
+            },
+            'description': 'Doorstep pickup in Thoothukudi and direct express delivery across Tamil Nadu and major cities across India.',
+          },
+          {
+            '@type': 'Service',
+            'name': 'Worldwide International Express Courier',
+            'serviceType': 'International Courier',
+            'provider': {
+              '@type': 'CourierService',
+              'name': 'SPL International Courier Solution',
+              'url': 'https://splexpress.in/',
+            },
+            'areaServed': 'Worldwide',
+            'description': 'Global air courier solutions with transit tracking connecting south Tamil Nadu to destinations worldwide.',
+          },
+        ]}
+      />
 
       {/* ========================================================================= */}
       {/* ========================================================================= */}

@@ -11,7 +11,7 @@ const SERVICE_ITEMS: ServiceStripItem[] = [
   {
     icon: MapPin,
     title: "LOCAL PICKUP",
-    subtitle: "Thoothukudi, Tamil Nadu",
+    subtitle: "Thoothukudi & Tuticorin",
   },
   {
     icon: Truck,

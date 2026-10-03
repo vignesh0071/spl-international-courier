@@ -16,6 +16,7 @@ import {
 import { Button } from '../components/Button';
 import { Footer } from '../components/Footer';
 import { COMPANY_CONFIG } from '../config/constants';
+import { SEOHead } from '../components/SEOHead';
 
 interface ContactPageProps {
   onOpenBookingModal: (service?: string, destination?: string, requirement?: string) => void;
@@ -55,6 +56,49 @@ export const ContactPage: React.FC<ContactPageProps> = ({
 
   return (
     <div className="w-full bg-white text-spl-navy-deep min-h-screen flex flex-col">
+      {/* Dynamic SEO Meta & Structured Data */}
+      <SEOHead
+        title="Contact Dispatch Hub | SPL International Courier Solution"
+        description="Contact SPL International Courier Solution in Thoothukudi, Tamil Nadu. Phone +91 98945 90600, WhatsApp shipment booking, and central hub address for pickup and inquiries."
+        canonicalPath="/contact"
+        keywords="contact SPL courier, Thoothukudi courier phone number, courier booking WhatsApp, logistics office Thoothukudi, SPL Worldwide Express contact"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Contact', item: '/contact' },
+        ]}
+        structuredData={{
+          '@type': 'ContactPage',
+          '@id': 'https://splexpress.in/contact#webpage',
+          'url': 'https://splexpress.in/contact',
+          'name': 'Contact SPL International Courier Solution',
+          'description': 'Contact SPL International Courier Solution in Thoothukudi, Tamil Nadu. Direct phone +91 98945 90600, WhatsApp booking, and dispatch hub address.',
+          'mainEntity': {
+            '@type': 'CourierService',
+            'name': 'SPL International Courier Solution',
+            'telephone': '+919894590600',
+            'email': 'ind.splogistics@gmail.com',
+            'address': {
+              '@type': 'PostalAddress',
+              'streetAddress': 'Q4WW+RMQ',
+              'addressLocality': 'Thoothukudi',
+              'addressRegion': 'Tamil Nadu',
+              'postalCode': '628001',
+              'addressCountry': 'IN',
+            },
+            'geo': {
+              '@type': 'GeoCoordinates',
+              'latitude': 8.7642,
+              'longitude': 78.1348,
+            },
+            'openingHoursSpecification': {
+              '@type': 'OpeningHoursSpecification',
+              'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+              'opens': '10:00',
+              'closes': '22:00',
+            },
+          },
+        }}
+      />
       
       {/* ========================================================================= */}
       {/* 01. CONTACT EDITORIAL HERO */}

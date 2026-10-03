@@ -19,6 +19,7 @@ import { Button } from '../components/Button';
 import { Footer } from '../components/Footer';
 import { CourierLogosRow } from '../components/CourierLogos';
 import { COMPANY_CONFIG } from '../config/constants';
+import { SEOHead } from '../components/SEOHead';
 
 interface ServicesPageProps {
   onOpenBookingModal: (service?: string) => void;
@@ -71,6 +72,58 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
 
   return (
     <div className="w-full bg-[#F8F7F2] text-spl-navy-deep min-h-screen flex flex-col">
+      {/* Dynamic SEO Meta & Structured Data */}
+      <SEOHead
+        title="Courier Services in Thoothukudi | International & Domestic Parcel Delivery - SPL"
+        description="Comprehensive courier services in Thoothukudi (Tuticorin): international express shipping, domestic parcel delivery across India, urgent document courier, cargo forwarding, and free doorstep pickup."
+        canonicalPath="/services"
+        keywords="courier services in thoothukudi, express courier service in thoothukudi, international courier service in thoothukudi, domestic courier service in thoothukudi, international parcel delivery thoothukudi, document courier service, courier pickup service thoothukudi, courier services in tuticorin"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Services', item: '/services' },
+        ]}
+        structuredData={[
+          {
+            '@type': 'Service',
+            'name': 'International Courier Service Thoothukudi',
+            'serviceType': 'International Express Courier',
+            'provider': {
+              '@type': 'CourierService',
+              'name': 'SPL International Courier',
+              'url': 'https://splexpress.in/',
+            },
+            'areaServed': 'Worldwide',
+            'description': 'Fast international air express courier services connecting Thoothukudi and Tuticorin with USA, UK, UAE, Canada, Australia, Singapore, and Europe.',
+          },
+          {
+            '@type': 'Service',
+            'name': 'Domestic Express Courier Service Thoothukudi',
+            'serviceType': 'Domestic Parcel Delivery',
+            'provider': {
+              '@type': 'CourierService',
+              'name': 'SPL International Courier',
+              'url': 'https://splexpress.in/',
+            },
+            'areaServed': {
+              '@type': 'Country',
+              'name': 'India',
+            },
+            'description': 'Reliable domestic courier service from Thoothukudi across India with express door-to-door parcel delivery.',
+          },
+          {
+            '@type': 'Service',
+            'name': 'Courier Pickup Service Thoothukudi',
+            'serviceType': 'Doorstep Courier Collection',
+            'provider': {
+              '@type': 'CourierService',
+              'name': 'SPL International Courier',
+              'url': 'https://splexpress.in/',
+            },
+            'areaServed': ['Thoothukudi', 'Tuticorin'],
+            'description': 'Free doorstep courier pickup and packaging coordination across Thoothukudi and Tuticorin for documents and parcels.',
+          },
+        ]}
+      />
 
       {/* ========================================================================= */}
       {/* 1. SERVICES HERO OPENING */}
@@ -163,7 +216,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
           <div className="relative w-full h-[280px] sm:h-[360px] rounded-xl overflow-hidden border border-slate-200 shadow-2xs">
             <img
               src="/images/spl-services-hero.jpg"
-              alt="SPL parcel preparation"
+              alt="SPL Worldwide Express parcel sorting and dispatch preparation"
               className="w-full h-full object-cover object-[center_35%]"
               loading="lazy"
             />
@@ -212,37 +265,37 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             </div>
 
             <h2 className="font-display font-extrabold text-[24px] min-[360px]:text-[28px] sm:text-[34px] lg:text-[36px] text-spl-navy-deep leading-tight">
-              Domestic Express Delivery
+              Domestic Express Courier Service
             </h2>
 
             <p className="font-body text-slate-700 text-[14.5px] sm:text-[15.5px] leading-relaxed">
-              Send documents, personal parcels and business shipments across India through established courier and logistics networks.
+              Dependable domestic courier service in Thoothukudi and Tuticorin for documents, personal parcels, and commercial goods with door-to-door delivery across India.
             </p>
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-body text-[14px] text-slate-700">
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Document shipments</span>
+                <span>Express document courier service</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Personal parcels</span>
+                <span>Domestic parcel delivery across India</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Business packages</span>
+                <span>Business &amp; corporate packages</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Door-to-door options where available</span>
+                <span>Door-to-door courier delivery</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Pickup coordination in Thoothukudi</span>
+                <span>Courier pickup service in Thoothukudi &amp; Tuticorin</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Tracking support where applicable</span>
+                <span>Real-time consignment tracking support</span>
               </li>
             </ul>
 
@@ -302,43 +355,43 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             </div>
 
             <h2 className="font-display font-extrabold text-[24px] min-[360px]:text-[28px] sm:text-[34px] lg:text-[36px] text-spl-navy-deep leading-tight">
-              International Air Express
+              International Courier Service Thoothukudi
             </h2>
 
             <p className="font-body text-slate-700 text-[14.5px] sm:text-[15.5px] leading-relaxed">
-              For international shipments, SPL coordinates courier movement based on destination, shipment type, required service and available carrier options.
+              Express international courier service from Thoothukudi and Tuticorin for documents, parcels, and commercial shipments with global air transit to over 220 countries.
             </p>
 
             <div className="p-4 rounded-[4px] bg-white border border-slate-200 text-[13.5px] font-body text-slate-600">
               <p>
-                International consignments may be routed through established courier networks including <strong className="font-semibold text-spl-navy-deep">DHL, UPS, FedEx, and Aramex</strong>. Available carrier options depend on destination and shipment requirements.
+                International consignments are routed through premier global carriers including <strong className="font-semibold text-spl-navy-deep">DHL, UPS, FedEx, and Aramex</strong>. We coordinate courier shipments to USA, UK, UAE (Dubai), Canada, Singapore, Australia, and Europe.
               </p>
             </div>
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 font-body text-[14px] text-slate-700">
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Documents &amp; Certificates</span>
+                <span>International document delivery &amp; certificates</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Personal parcels</span>
+                <span>International parcel shipping &amp; gifts</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>International courier shipments</span>
+                <span>Courier to USA, UK, UAE, Canada &amp; Singapore</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Commercial shipments</span>
+                <span>Worldwide express courier tracking</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Shipment coordination</span>
+                <span>Doorstep courier pickup in Thoothukudi</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Customs documentation guidance where applicable</span>
+                <span>Customs documentation &amp; clearance guidance</span>
               </li>
             </ul>
 
@@ -374,11 +427,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             </div>
 
             <h2 className="font-display font-extrabold text-[24px] min-[360px]:text-[28px] sm:text-[34px] lg:text-[36px] text-spl-navy-deep leading-tight">
-              Business &amp; Commercial Shipments
+              Business &amp; Corporate Courier Service
             </h2>
 
             <p className="font-body text-slate-700 text-[14.5px] sm:text-[15.5px] leading-relaxed">
-              SPL supports businesses that need to move documents, samples, parts, products and commercial consignments through suitable courier and logistics networks.
+              SPL provides dedicated business courier service and corporate courier solutions for enterprises, port merchants, and exporters in Thoothukudi and Tuticorin.
             </p>
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-body text-[14px] text-slate-700">
@@ -404,7 +457,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-spl-yellow shrink-0 mt-0.5" />
-                <span>Repeat shipping requirements</span>
+                <span>Repeat corporate shipping contracts</span>
               </li>
             </ul>
 
@@ -464,11 +517,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             </div>
 
             <h2 className="font-display font-extrabold text-[24px] min-[360px]:text-[28px] sm:text-[34px] lg:text-[36px] text-spl-navy-deep leading-tight">
-              Documents &amp; Personal Parcels
+              Document Courier &amp; Personal Parcel Service
             </h2>
 
             <p className="font-body text-slate-700 text-[14.5px] sm:text-[15.5px] leading-relaxed">
-              From important documents to personal parcels, SPL supports everyday shipments that require careful handling and reliable coordination.
+              Express document delivery and secure parcel shipping service for individuals, students, and families in Thoothukudi with free doorstep collection.
             </p>
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-body text-[14px] text-slate-700">

@@ -1,0 +1,21 @@
+{
+  "name": "SPL International Courier Solution",
+  "short_name": "SPL Express",
+  "description": "Domestic & International Courier and Logistics Solutions based in Thoothukudi, Tamil Nadu.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071A2B",
+  "theme_color": "#071A2B",
+  "icons": [
+    {
+      "src": "/spl-favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
