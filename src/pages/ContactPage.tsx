@@ -58,10 +58,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
     <div className="w-full bg-white text-spl-navy-deep min-h-screen flex flex-col">
       {/* Dynamic SEO Meta & Structured Data */}
       <SEOHead
-        title="Contact Dispatch Hub | SPL International Courier Solution"
-        description="Contact SPL International Courier Solution in Thoothukudi, Tamil Nadu. Phone +91 98945 90600, WhatsApp shipment booking, and central hub address for pickup and inquiries."
+        title="Contact SPL Courier Thoothukudi | Courier Office & Dispatch Hub Tuticorin"
+        description="Contact SPL International Courier in Thoothukudi (Tuticorin), Tamil Nadu. Call +91 98945 90600 or WhatsApp for express parcel pickup, international shipping rates, and dispatch support."
         canonicalPath="/contact"
-        keywords="contact SPL courier, Thoothukudi courier phone number, courier booking WhatsApp, logistics office Thoothukudi, SPL Worldwide Express contact"
+        keywords="spl courier thoothukudi, courier service tuticorin, courier near me thoothukudi, courier near me tuticorin, courier office thoothukudi, courier pickup service thoothukudi, spl international courier contact"
         breadcrumbs={[
           { name: 'Home', item: '/' },
           { name: 'Contact', item: '/contact' },
@@ -70,11 +70,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({
           '@type': 'ContactPage',
           '@id': 'https://splexpress.in/contact#webpage',
           'url': 'https://splexpress.in/contact',
-          'name': 'Contact SPL International Courier Solution',
-          'description': 'Contact SPL International Courier Solution in Thoothukudi, Tamil Nadu. Direct phone +91 98945 90600, WhatsApp booking, and dispatch hub address.',
+          'name': 'Contact SPL International Courier Thoothukudi',
+          'description': 'Contact SPL International Courier in Thoothukudi (Tuticorin), Tamil Nadu. Direct phone +91 98945 90600, WhatsApp booking, and courier office address.',
           'mainEntity': {
             '@type': 'CourierService',
-            'name': 'SPL International Courier Solution',
+            'name': 'SPL International Courier',
+            'alternateName': ['SPL Worldwide Express', 'SPL Courier Thoothukudi', 'SPL Courier Tuticorin'],
             'telephone': '+919894590600',
             'email': 'ind.splogistics@gmail.com',
             'address': {
@@ -146,19 +147,19 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                 <MapPin className="w-4 h-4 text-spl-navy-deep" />
               </span>
               <span className="font-heading font-bold text-[11.5px] tracking-[0.18em] uppercase text-slate-500">
-                GET IN TOUCH • THOOTHUKUDI DISPATCH HUB
+                GET IN TOUCH • THOOTHUKUDI &amp; TUTICORIN COURIER HUB
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="font-display font-extrabold text-[28px] min-[360px]:text-[34px] sm:text-[44px] lg:text-[48px] xl:text-[52px] text-spl-navy-deep leading-[1.12]">
               <span>Contact </span>
-              <span className="font-serif italic font-normal text-slate-700">SPL Worldwide Express.</span>
+              <span className="font-serif italic font-normal text-slate-700">SPL International Courier.</span>
             </h1>
 
             {/* Introductory Business Copy */}
             <p className="font-body text-[#46515C] text-[15px] sm:text-[16px] leading-relaxed max-w-[560px]">
-              Based in Thoothukudi, Tamil Nadu, SPL Worldwide Express coordinates domestic parcel deliveries across India and international express shipments worldwide. Connect with our local dispatch team for pickup requests, courier options, or rate guidance.
+              Based in Thoothukudi (Tuticorin), Tamil Nadu, SPL International Courier coordinates reliable domestic parcel deliveries across India and international express shipping worldwide. Connect with our local dispatch team for doorstep courier pickup requests, overseas shipping rates, or consignment tracking.
             </p>
 
             {/* Action Buttons */}
@@ -292,7 +293,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   WHATSAPP CHAT
                 </h3>
                 <p className="font-body text-[13.5px] text-[#46515C] leading-relaxed mb-4">
-                  Send parcel weight, photos and destination pin for fast rates and pickup coordination.
+                  Send parcel weight, photos and destination pin for fast rates and doorstep courier pickup in Thoothukudi &amp; Tuticorin.
                 </p>
               </div>
               <button
@@ -337,7 +338,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   DISPATCH HOURS
                 </h3>
                 <p className="font-body text-[13.5px] text-[#46515C] leading-relaxed mb-4">
-                  Open every day for walk-ins, counter booking, parcel drop-offs and courier dispatches.
+                  Open every day for walk-ins, counter booking, parcel drop-offs and express courier service in Thoothukudi.
                 </p>
               </div>
               <div className="flex items-center gap-2 text-[13px] font-heading font-bold text-spl-navy-deep">
@@ -368,11 +369,11 @@ export const ContactPage: React.FC<ContactPageProps> = ({
 
             <h2 className="font-display font-extrabold text-[24px] min-[360px]:text-[28px] sm:text-[34px] text-spl-navy-deep leading-tight">
               <span>Visit our counter in </span>
-              <span className="font-serif italic font-normal text-slate-700">Thoothukudi.</span>
+              <span className="font-serif italic font-normal text-slate-700">Thoothukudi (Tuticorin).</span>
             </h2>
 
             <p className="font-body text-[#46515C] text-[15px] leading-relaxed">
-              Customers in Thoothukudi are welcome to visit our counter directly for urgent parcel handovers, packaging guidance, rate comparisons, and commercial consignment dispatch.
+              Customers and businesses in Thoothukudi and Tuticorin are welcome to visit our courier counter directly for urgent parcel handovers, packaging guidance, rate comparisons, or booking doorstep courier pickup.
             </p>
 
             <div className="p-5 rounded-lg bg-[#F8F7F2] border border-slate-200/90 space-y-3">

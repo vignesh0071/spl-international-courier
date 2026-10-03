@@ -47,9 +47,9 @@ const HERO_SLIDES: HeroSlide[] = [
     headlineBold: "across India and ",
     headlineAccent: "beyond.",
     descriptionPrimary:
-      "SPL Worldwide Express connects local pickup requirements in Thoothukudi with domestic movement across India and international courier solutions for overseas destinations.",
+      "SPL International Courier connects doorstep pickup in Thoothukudi and Tuticorin with express domestic parcel delivery across India and worldwide international courier networks.",
     descriptionSecondary:
-      "From important documents and personal parcels to business and commercial shipments, we coordinate suitable courier options based on destination and service requirements.",
+      "From urgent documents and personal parcels to commercial cargo, we provide reliable courier solutions tailored to your destination.",
   },
   {
     id: 2,
@@ -59,9 +59,9 @@ const HERO_SLIDES: HeroSlide[] = [
     headlineBold: "to key global ",
     headlineAccent: "destinations.",
     descriptionPrimary:
-      "Coordinating international parcel delivery, commercial sample dispatch, and urgent document couriers to Europe, the Middle East, Southeast Asia, and the Americas.",
+      "Coordinating international parcel delivery, urgent document couriers, and commercial cargo from Thoothukudi to USA, UK, UAE (Dubai), Canada, Singapore, Australia, and Europe.",
     descriptionSecondary:
-      "Providing practical documentation guidance and reliable end-to-end dispatch coordination starting right from our Thoothukudi maritime hub.",
+      "Providing professional customs guidance, packing support, and end-to-end transit tracking from our Thoothukudi dispatch hub.",
   },
 ];
 
@@ -133,10 +133,10 @@ export const DomesticInternationalPage: React.FC<DomesticInternationalPageProps>
     <div className="w-full bg-white text-spl-navy-deep min-h-screen flex flex-col font-body selection:bg-spl-yellow selection:text-spl-navy-deep">
       {/* Dynamic SEO Meta & Structured Data */}
       <SEOHead
-        title="Domestic & International Courier Delivery | SPL Worldwide Express"
-        description="Seamless domestic parcel delivery across India and international courier solutions to global destinations from our central Thoothukudi dispatch hub."
+        title="International & Domestic Courier Service Thoothukudi (Tuticorin) | SPL Express"
+        description="Express international courier service from Thoothukudi (Tuticorin) to USA, UK, UAE, Canada, Singapore & Europe, plus dependable domestic courier delivery across India."
         canonicalPath="/domestic-international"
-        keywords="domestic courier services India, international parcel delivery, overseas express shipping, courier from Tamil Nadu, SPL Worldwide Express"
+        keywords="international courier service thoothukudi, domestic courier service thoothukudi, courier to usa from thoothukudi, courier to uae from thoothukudi, courier to uk from thoothukudi, international courier tuticorin, domestic courier tuticorin, parcel delivery across india, international parcel delivery thoothukudi"
         breadcrumbs={[
           { name: 'Home', item: '/' },
           { name: 'Domestic & International', item: '/domestic-international' },
@@ -144,30 +144,30 @@ export const DomesticInternationalPage: React.FC<DomesticInternationalPageProps>
         structuredData={[
           {
             '@type': 'Service',
-            'name': 'Pan-India Domestic Parcel Express',
-            'serviceType': 'Domestic Courier',
+            'name': 'Domestic Courier Service Thoothukudi',
+            'serviceType': 'Domestic Express Delivery',
             'provider': {
               '@type': 'CourierService',
-              'name': 'SPL International Courier Solution',
+              'name': 'SPL International Courier',
               'url': 'https://splexpress.in/',
             },
             'areaServed': {
               '@type': 'Country',
               'name': 'India',
             },
-            'description': 'Doorstep pickup in Thoothukudi and direct express delivery across Tamil Nadu and major cities across India.',
+            'description': 'Doorstep pickup in Thoothukudi and Tuticorin with express parcel delivery across Tamil Nadu and major cities across India.',
           },
           {
             '@type': 'Service',
-            'name': 'Worldwide International Express Courier',
-            'serviceType': 'International Courier',
+            'name': 'International Express Courier Thoothukudi',
+            'serviceType': 'International Air Courier',
             'provider': {
               '@type': 'CourierService',
-              'name': 'SPL International Courier Solution',
+              'name': 'SPL International Courier',
               'url': 'https://splexpress.in/',
             },
             'areaServed': 'Worldwide',
-            'description': 'Global air courier solutions with transit tracking connecting south Tamil Nadu to destinations worldwide.',
+            'description': 'Worldwide air courier service connecting south Tamil Nadu to USA, UK, UAE, Canada, Australia, Singapore, and Europe.',
           },
         ]}
       />
@@ -430,7 +430,7 @@ export const DomesticInternationalPage: React.FC<DomesticInternationalPageProps>
 
             {/* Introductory Business Copy */}
             <p className="font-body text-[#46515C] text-[15px] sm:text-[15.5px] leading-relaxed max-w-[600px]">
-              From local pickup in Thoothukudi to destinations across India, SPL Worldwide Express supports document, parcel and business shipment requirements through coordinated courier and logistics networks.
+              From doorstep courier pickup in Thoothukudi and Tuticorin to destinations across India, SPL International Courier provides fast domestic parcel delivery, express document shipping, and cargo transport through coordinated logistics networks.
             </p>
 
             {/* Compact Editorial 2x2 Service Items */}
@@ -439,11 +439,11 @@ export const DomesticInternationalPage: React.FC<DomesticInternationalPageProps>
                 <div className="flex items-center gap-2 mb-1">
                   <MapPin className="w-4 h-4 text-spl-yellow shrink-0" />
                   <h3 className="font-heading font-bold text-[12px] sm:text-[12.5px] tracking-wider uppercase text-spl-navy-deep">
-                    LOCAL PICKUP
+                    LOCAL COURIER PICKUP
                   </h3>
                 </div>
                 <p className="text-[13px] text-[#46515C] leading-relaxed">
-                  Pickup coordination from your doorstep in Thoothukudi or direct counter drop-off.
+                  Convenient courier pickup service from your doorstep in Thoothukudi &amp; Tuticorin.
                 </p>
               </div>
 
@@ -451,11 +451,11 @@ export const DomesticInternationalPage: React.FC<DomesticInternationalPageProps>
                 <div className="flex items-center gap-2 mb-1">
                   <Truck className="w-4 h-4 text-spl-yellow shrink-0" />
                   <h3 className="font-heading font-bold text-[12px] sm:text-[12.5px] tracking-wider uppercase text-spl-navy-deep">
-                    PAN-INDIA MOVEMENT
+                    PAN-INDIA COURIER
                   </h3>
                 </div>
                 <p className="text-[13px] text-[#46515C] leading-relaxed">
-                  Support for domestic destinations through coordinated courier and express logistics networks.
+                  Fast parcel delivery across India through premier domestic express logistics channels.
                 </p>
               </div>
 
@@ -801,12 +801,12 @@ export const DomesticInternationalPage: React.FC<DomesticInternationalPageProps>
 
             {/* Introductory Copy */}
             <p className="font-body text-[#46515C] text-[15px] sm:text-[15.5px] leading-relaxed max-w-[600px]">
-              International courier support for documents, parcels and commercial shipments through established courier and logistics networks.
+              International courier service from Thoothukudi (Tuticorin) for documents, personal parcels, and commercial cargo. Fast air express connections to the USA, UK, UAE (Dubai), Canada, Singapore, Australia, Europe, and over 220 countries worldwide.
             </p>
 
             {/* Added International Supporting Copy */}
             <p className="font-body text-[#5A6572] text-[13.5px] sm:text-[14px] leading-relaxed max-w-[600px]">
-              International shipment requirements may vary by destination, parcel type, documentation and applicable customs procedures. SPL Worldwide Express coordinates suitable courier options based on the shipment requirement and available network.
+              We coordinate international document delivery and overseas parcel shipping with complete customs paperwork guidance and trusted carrier handoffs right from our Thoothukudi hub.
             </p>
 
             {/* Compact Editorial Service Points */}
@@ -815,11 +815,11 @@ export const DomesticInternationalPage: React.FC<DomesticInternationalPageProps>
                 <div className="flex items-center gap-2 mb-1">
                   <FileText className="w-4 h-4 text-spl-yellow shrink-0" />
                   <h3 className="font-heading font-bold text-[12px] sm:text-[12.5px] tracking-wider uppercase text-spl-navy-deep">
-                    INTERNATIONAL PARCELS
+                    DOCUMENT COURIER
                   </h3>
                 </div>
                 <p className="text-[13px] text-[#46515C] leading-relaxed">
-                  International document shipments and parcels.
+                  International document courier for certificates, visas, and legal papers.
                 </p>
               </div>
 
@@ -827,11 +827,11 @@ export const DomesticInternationalPage: React.FC<DomesticInternationalPageProps>
                 <div className="flex items-center gap-2 mb-1">
                   <Package className="w-4 h-4 text-spl-yellow shrink-0" />
                   <h3 className="font-heading font-bold text-[12px] sm:text-[12.5px] tracking-wider uppercase text-spl-navy-deep">
-                    PERSONAL PARCELS
+                    PARCEL SHIPPING
                   </h3>
                 </div>
                 <p className="text-[13px] text-[#46515C] leading-relaxed">
-                  Personal packages and everyday international consignments.
+                  International parcel shipping to USA, UK, UAE, Canada, and global destinations.
                 </p>
               </div>
 
