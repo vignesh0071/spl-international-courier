@@ -239,7 +239,7 @@ Name: ${data.senderName.trim()}
 📞 Mobile: ${data.mobile.trim()}
 ✉️ Email: ${data.email.trim()}
 
-📦 Receiver Details
+👤 Receiver Details
 Name: ${data.receiverName.trim()}
 📞 Mobile: ${data.receiverMobile.trim()}
 📍 Address:
