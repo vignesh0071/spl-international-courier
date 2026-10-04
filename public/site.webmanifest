@@ -13,13 +13,18 @@
       "type": "image/png"
     },
     {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
       "src": "/favicon-48x48.png",
       "sizes": "48x48",
       "type": "image/png"
     },
     {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
       "type": "image/png"
     }
   ]
