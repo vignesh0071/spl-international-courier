@@ -220,51 +220,36 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   };
 
   const constructWhatsAppMessage = (data: FormData): string => {
-    return `*SPL INTERNATIONAL COURIER SOLUTION*
-*NEW SHIPMENT ENQUIRY*
+    const additional =
+      data.additionalRequirements.trim() ||
+      'Please arrange pickup and provide the available shipping option and estimated charges.';
 
-*SENDER DETAILS*
-Sender Name: ${data.senderName.trim()}
-Phone: ${data.mobile.trim()}
-Email: ${data.email.trim()}
+    return `📦 SPL Shipment Enquiry
 
-*RECEIVER DETAILS*
-Receiver Name: ${data.receiverName.trim()}
-Receiver Phone: ${data.receiverMobile.trim()}
-Receiver Address: ${data.receiverAddress.trim()}
+New Shipment Request
 
-*SHIPMENT DETAILS*
-Pickup Location: ${data.pickupLocation.trim()}
+📦 Shipment Details
+Pickup: ${data.pickupLocation.trim()}
 Destination: ${data.destination.trim()}
 Shipment Type: ${data.shipmentType.trim()}
 Estimated Weight: ${data.estimatedWeight.trim()}
 
-*MESSAGE*
-${data.additionalRequirements.trim() || 'Please calculate courier rate and confirm earliest pickup.'}`;
+👤 Sender Details
+Name: ${data.senderName.trim()}
+Mobile: ${data.mobile.trim()}
+✉️ Email: ${data.email.trim()}
+
+Additional Requirements:
+${additional}
+
+📞 +91 98945 90600
+
+Thank you,
+SPL Worldwide Express`;
   };
 
   const constructPreviewText = (data: FormData): string => {
-    return `SPL INTERNATIONAL COURIER SOLUTION
-NEW SHIPMENT ENQUIRY
-
-SENDER DETAILS
-Sender Name: ${data.senderName.trim()}
-Phone: ${data.mobile.trim()}
-Email: ${data.email.trim()}
-
-RECEIVER DETAILS
-Receiver Name: ${data.receiverName.trim()}
-Receiver Phone: ${data.receiverMobile.trim()}
-Receiver Address: ${data.receiverAddress.trim()}
-
-SHIPMENT DETAILS
-Pickup Location: ${data.pickupLocation.trim()}
-Destination: ${data.destination.trim()}
-Shipment Type: ${data.shipmentType.trim()}
-Estimated Weight: ${data.estimatedWeight.trim()}
-
-MESSAGE:
-${data.additionalRequirements.trim() || 'Please calculate courier rate and confirm earliest pickup.'}`;
+    return constructWhatsAppMessage(data);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
