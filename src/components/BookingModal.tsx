@@ -249,6 +249,7 @@ ${data.receiverAddress.trim()}
 ${additional}
 
 ────────────────────
+
 SPL Worldwide Express
 📞 +91 98945 90600`;
   };
@@ -267,9 +268,14 @@ SPL Worldwide Express
     setGeneratedMessage(message);
     setIsSubmitted(true);
 
+    console.log("FINAL WHATSAPP MESSAGE:", message);
+
     // Encode properly and open WhatsApp
-    const encodedText = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
+    const encodedMessage = encodeURIComponent(message);
+    console.log("ENCODED WHATSAPP MESSAGE:", encodedMessage);
+
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodedMessage}`;
+    console.log("WHATSAPP URL:", whatsappUrl);
 
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
@@ -737,7 +743,7 @@ SPL Worldwide Express
               <div className="grid grid-cols-2 gap-2 sm:gap-3 w-full">
                 {/* REOPEN WHATSAPP CHAT */}
                 <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(generatedMessage)}`}
+                  href={`https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(generatedMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-1 sm:gap-2 h-[46px] px-1 sm:px-4 rounded-lg bg-[#25D366] hover:bg-[#1EBE5D] text-white font-heading font-bold transition-all shadow-sm select-none cursor-pointer active:scale-[0.99] overflow-hidden"
