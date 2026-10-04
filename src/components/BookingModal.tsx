@@ -268,7 +268,20 @@ SPL Worldwide Express
     setGeneratedMessage(message);
     setIsSubmitted(true);
 
-    console.log("FINAL WHATSAPP MESSAGE:", message);
+    const testMessage = "📦 📞 ✉️ 👤 📍 📝";
+    console.log(testMessage);
+    console.log(testMessage.includes("📦"));
+    console.log(testMessage.includes("📞"));
+    console.log(testMessage.includes("✉️"));
+
+    console.log("ACTUAL MESSAGE SENT TO WHATSAPP:", message);
+    console.log("Receiver Name:", formData.receiverName);
+    console.log("Receiver Mobile:", formData.receiverMobile);
+    console.log("Receiver Address:", formData.receiverAddress);
+    console.log("HAS RECEIVER:", message.includes("Receiver Details"));
+    console.log("HAS PARCEL EMOJI:", message.includes("📦"));
+    console.log("HAS PHONE EMOJI:", message.includes("📞"));
+    console.log("HAS EMAIL EMOJI:", message.includes("✉️"));
 
     // Encode properly and open WhatsApp
     const encodedMessage = encodeURIComponent(message);
