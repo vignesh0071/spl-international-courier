@@ -21,6 +21,7 @@ interface FormData {
   senderName: string;
   mobile: string;
   email: string;
+  senderAddress: string;
   // 3. Receiver Details
   receiverName: string;
   receiverMobile: string;
@@ -37,6 +38,7 @@ interface FormErrors {
   senderName?: string;
   mobile?: string;
   email?: string;
+  senderAddress?: string;
   receiverName?: string;
   receiverMobile?: string;
   receiverAddress?: string;
@@ -76,6 +78,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     senderName: '',
     mobile: '',
     email: '',
+    senderAddress: '',
     receiverName: '',
     receiverMobile: '',
     receiverAddress: '',
@@ -184,22 +187,28 @@ export const BookingModal: React.FC<BookingModalProps> = ({
       if (!firstInvalidId) firstInvalidId = 'field-email';
     }
 
-    // 8. Receiver Name
+    // 8. Sender Pickup Address
+    if (!formData.senderAddress.trim()) {
+      newErrors.senderAddress = 'Please enter complete pickup address';
+      if (!firstInvalidId) firstInvalidId = 'field-senderAddress';
+    }
+
+    // 9. Receiver Name
     if (!formData.receiverName.trim()) {
       newErrors.receiverName = 'Please enter receiver name';
       if (!firstInvalidId) firstInvalidId = 'field-receiverName';
     }
 
-    // 9. Receiver Mobile Number
+    // 10. Receiver Mobile Number
     const cleanReceiverPhone = formData.receiverMobile.replace(/[^0-9]/g, '');
     if (!cleanReceiverPhone || cleanReceiverPhone.length < 10) {
       newErrors.receiverMobile = 'Please enter a valid 10-digit mobile number';
       if (!firstInvalidId) firstInvalidId = 'field-receiverMobile';
     }
 
-    // 10. Receiver Address
+    // 11. Receiver Delivery Address
     if (!formData.receiverAddress.trim()) {
-      newErrors.receiverAddress = 'Please enter complete receiver address';
+      newErrors.receiverAddress = 'Please enter complete delivery address';
       if (!firstInvalidId) firstInvalidId = 'field-receiverAddress';
     }
 
@@ -238,11 +247,13 @@ Estimated Weight: ${data.estimatedWeight.trim()}
 Name: ${data.senderName.trim()}
 📞 Mobile: ${data.mobile.trim()}
 ✉️ Email: ${data.email.trim()}
+📍 Pickup Address:
+${data.senderAddress.trim()}
 
 👤 Receiver Details
 Name: ${data.receiverName.trim()}
 📞 Mobile: ${data.receiverMobile.trim()}
-📍 Address:
+📍 Delivery Address:
 ${data.receiverAddress.trim()}
 
 📝 Additional Requirements
@@ -275,13 +286,21 @@ SPL Worldwide Express
     console.log(testMessage.includes("✉️"));
 
     console.log("ACTUAL MESSAGE SENT TO WHATSAPP:", message);
+    console.log("Sender Name:", formData.senderName);
+    console.log("Sender Mobile:", formData.mobile);
+    console.log("Sender Email:", formData.email);
+    console.log("Sender Address:", formData.senderAddress);
     console.log("Receiver Name:", formData.receiverName);
     console.log("Receiver Mobile:", formData.receiverMobile);
     console.log("Receiver Address:", formData.receiverAddress);
+    console.log("HAS SENDER PICKUP ADDRESS:", message.includes("📍 Pickup Address:"));
+    console.log("HAS RECEIVER DELIVERY ADDRESS:", message.includes("📍 Delivery Address:"));
+    console.log("HAS SENDER:", message.includes("Sender Details"));
     console.log("HAS RECEIVER:", message.includes("Receiver Details"));
     console.log("HAS PARCEL EMOJI:", message.includes("📦"));
     console.log("HAS PHONE EMOJI:", message.includes("📞"));
     console.log("HAS EMAIL EMOJI:", message.includes("✉️"));
+    console.log("HAS PIN EMOJI:", message.includes("📍"));
 
     // Encode properly and open WhatsApp
     const encodedMessage = encodeURIComponent(message);
@@ -563,6 +582,30 @@ SPL Worldwide Express
                       )}
                     </div>
                   </div>
+
+                  <div>
+                    <label htmlFor="field-senderAddress" className="block text-[13px] font-heading font-semibold text-spl-navy-deep mb-1">
+                      Pickup Address <span className="text-red-500 font-bold">*</span>
+                    </label>
+                    <textarea
+                      id="field-senderAddress"
+                      rows={3}
+                      value={formData.senderAddress}
+                      onChange={(e) => {
+                        setFormData({ ...formData, senderAddress: e.target.value });
+                        if (errors.senderAddress) setErrors({ ...errors, senderAddress: undefined });
+                      }}
+                      placeholder="Enter complete pickup address (door/building, street, area, city, pincode)"
+                      className={`w-full px-3 py-2 text-[13.5px] rounded-lg border transition-all resize-none ${
+                        errors.senderAddress ? 'border-red-500 bg-red-50/30' : 'border-slate-300 focus:border-spl-navy-deep focus:ring-1 focus:ring-spl-navy-deep'
+                      }`}
+                    />
+                    {errors.senderAddress && (
+                      <p className="text-[11px] text-red-600 mt-1 flex items-center gap-1">
+                        <AlertCircle className="w-3 h-3 flex-shrink-0" /> {errors.senderAddress}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </div>
 
@@ -627,7 +670,7 @@ SPL Worldwide Express
 
                   <div>
                     <label htmlFor="field-receiverAddress" className="block text-[13px] font-heading font-semibold text-spl-navy-deep mb-1">
-                      Receiver Address <span className="text-red-500 font-bold">*</span>
+                      Delivery Address <span className="text-red-500 font-bold">*</span>
                     </label>
                     <textarea
                       id="field-receiverAddress"
@@ -637,7 +680,7 @@ SPL Worldwide Express
                         setFormData({ ...formData, receiverAddress: e.target.value });
                         if (errors.receiverAddress) setErrors({ ...errors, receiverAddress: undefined });
                       }}
-                      placeholder="Enter complete receiver address (building, street, area, city, state, pincode)"
+                      placeholder="Enter complete delivery address (building, street, area, city, state, pincode)"
                       className={`w-full px-3 py-2 text-[13.5px] rounded-lg border transition-all resize-none ${
                         errors.receiverAddress ? 'border-red-500 bg-red-50/30' : 'border-slate-300 focus:border-spl-navy-deep focus:ring-1 focus:ring-spl-navy-deep'
                       }`}
