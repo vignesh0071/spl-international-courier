@@ -219,7 +219,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     return true;
   };
 
-  const constructWhatsAppMessage = (data: FormData): string => {
+  const buildShipmentMessage = (data: FormData): string => {
     const additional =
       data.additionalRequirements.trim() ||
       'Please arrange pickup and provide the available shipping option and estimated charges.';
@@ -236,20 +236,21 @@ Estimated Weight: ${data.estimatedWeight.trim()}
 
 👤 Sender Details
 Name: ${data.senderName.trim()}
-Mobile: ${data.mobile.trim()}
+📞 Mobile: ${data.mobile.trim()}
 ✉️ Email: ${data.email.trim()}
 
-Additional Requirements:
+📦 Receiver Details
+Name: ${data.receiverName.trim()}
+📞 Mobile: ${data.receiverMobile.trim()}
+📍 Address:
+${data.receiverAddress.trim()}
+
+📝 Additional Requirements
 ${additional}
 
-📞 +91 98945 90600
-
-Thank you,
-SPL Worldwide Express`;
-  };
-
-  const constructPreviewText = (data: FormData): string => {
-    return constructWhatsAppMessage(data);
+────────────────────
+SPL Worldwide Express
+📞 +91 98945 90600`;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -262,12 +263,12 @@ SPL Worldwide Express`;
     const snapshot = { ...formData };
     setSubmittedData(snapshot);
 
-    const whatsappMessage = constructWhatsAppMessage(snapshot);
-    setGeneratedMessage(whatsappMessage);
+    const message = buildShipmentMessage(snapshot);
+    setGeneratedMessage(message);
     setIsSubmitted(true);
 
     // Encode properly and open WhatsApp
-    const encodedText = encodeURIComponent(whatsappMessage);
+    const encodedText = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
 
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
@@ -726,7 +727,7 @@ SPL Worldwide Express`;
                   msOverflowStyle: 'none',
                 }}
               >
-                {submittedData ? constructPreviewText(submittedData) : generatedMessage}
+                {generatedMessage}
               </div>
             </div>
 
