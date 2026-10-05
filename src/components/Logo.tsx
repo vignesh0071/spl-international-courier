@@ -28,7 +28,7 @@ export const Logo: React.FC<LogoProps> = ({
         <div className="bg-white px-2.5 py-1 rounded-[4px] shadow-xs flex items-center justify-center">
           <img
             src="/spl-official-logo-transparent.png"
-            alt="SPL International Courier Solution"
+            alt="SPL Worldwide Express"
             className={`${sizeStyles[size]} object-contain`}
             loading="eager"
             fetchPriority="high"
@@ -38,7 +38,7 @@ export const Logo: React.FC<LogoProps> = ({
         // Standard transparent presentation on light/header canvas
         <img
           src="/spl-official-logo-transparent.png"
-          alt="SPL International Courier Solution"
+          alt="SPL Worldwide Express"
           className={`${sizeStyles[size]} object-contain drop-shadow-2xs`}
           loading="eager"
           fetchPriority="high"

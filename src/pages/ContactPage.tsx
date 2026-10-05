@@ -58,10 +58,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
     <div className="w-full bg-white text-spl-navy-deep min-h-screen flex flex-col">
       {/* Dynamic SEO Meta & Structured Data */}
       <SEOHead
-        title="Courier Office in Thoothukudi | SPL Worldwide Express Contact"
-        description="Contact SPL Worldwide Express in Thoothukudi for domestic and international courier services, parcel shipments, pickup coordination and enquiries."
+        title="Contact SPL Worldwide Express | Courier Service Thoothukudi"
+        description="Contact SPL Worldwide Express in Thoothukudi for domestic and international courier services, parcel delivery, document shipments and business consignments."
         canonicalPath="/contact"
-        keywords="courier office in thoothukudi, courier service thoothukudi, parcel office thoothukudi, courier near me thoothukudi, courier pickup thoothukudi, spl worldwide express contact"
+        keywords="contact spl worldwide express, courier office in thoothukudi, courier service thoothukudi, parcel office thoothukudi, courier near me thoothukudi, courier pickup thoothukudi"
         breadcrumbs={[
           { name: 'Home', item: '/' },
           { name: 'Contact', item: '/contact' },
@@ -71,13 +71,14 @@ export const ContactPage: React.FC<ContactPageProps> = ({
           '@id': 'https://splexpress.in/contact#webpage',
           'url': 'https://splexpress.in/contact',
           'name': 'Contact SPL Worldwide Express Thoothukudi',
-          'description': 'Contact SPL Worldwide Express in Thoothukudi, Tamil Nadu for domestic and international courier services, parcel shipments, pickup coordination and enquiries.',
+          'description': 'Contact SPL Worldwide Express in Thoothukudi for domestic and international courier services, parcel delivery, document shipments and business consignments.',
           'mainEntity': {
             '@type': 'CourierService',
             'name': 'SPL Worldwide Express',
             'alternateName': ['SPL Worldwide Express', 'SPL Courier Thoothukudi'],
-            'telephone': '+919894590600',
+            'telephone': '+91 98945 90600',
             'email': 'ind.splogistics@gmail.com',
+            'url': 'https://splexpress.in/',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Q4WW+RMQ',

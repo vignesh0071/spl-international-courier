@@ -61,10 +61,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({
     <div className="w-full bg-[#F8F7F2] text-spl-navy-deep min-h-screen flex flex-col">
       {/* Dynamic SEO Meta & Structured Data */}
       <SEOHead
-        title="About SPL Worldwide Express | Thoothukudi Courier Service"
-        description="Learn about SPL Worldwide Express, a Thoothukudi courier service providing domestic and international shipment solutions for individuals and businesses."
+        title="About SPL Worldwide Express | Courier Service in Thoothukudi"
+        description="Learn about SPL Worldwide Express, a courier and logistics service based in Thoothukudi, Tamil Nadu, supporting domestic and international document, parcel and business shipments."
         canonicalPath="/about"
-        keywords="about spl worldwide express, courier service in thoothukudi, courier company thoothukudi, spl courier thoothukudi, domestic courier thoothukudi, international courier thoothukudi"
+        keywords="about spl worldwide express, courier service in thoothukudi, courier company thoothukudi, spl courier thoothukudi, domestic courier thoothukudi, international courier thoothukudi, parcel service thoothukudi"
         breadcrumbs={[
           { name: 'Home', item: '/' },
           { name: 'About Us', item: '/about' },
@@ -74,13 +74,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({
           '@id': 'https://splexpress.in/about#webpage',
           'url': 'https://splexpress.in/about',
           'name': 'About SPL Worldwide Express',
-          'description': 'Learn about SPL Worldwide Express, a Thoothukudi courier service providing domestic and international shipment solutions for individuals and businesses.',
+          'description': 'Learn about SPL Worldwide Express, a courier and logistics service based in Thoothukudi, Tamil Nadu, supporting domestic and international document, parcel and business shipments.',
           'mainEntity': {
             '@type': 'CourierService',
             'name': 'SPL Worldwide Express',
             'alternateName': ['SPL Worldwide Express', 'SPL Courier Thoothukudi'],
-            'telephone': '+919894590600',
+            'telephone': '+91 98945 90600',
             'email': 'ind.splogistics@gmail.com',
+            'url': 'https://splexpress.in/',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Q4WW+RMQ',
@@ -89,6 +90,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({
               'postalCode': '628001',
               'addressCountry': 'IN',
             },
+            'sameAs': [
+              'https://maps.app.goo.gl/DDnbJCcJZ99QLiQ46'
+            ],
           },
         }}
       />
@@ -114,7 +118,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             >
               <img
                 src="/images/spl-about-thoothukudi.jpg"
-                alt="SPL Express Courier vehicle and cargo parcel handling at Thoothukudi port dispatch station with lighthouse background"
+                alt="SPL Worldwide Express courier vehicle and cargo parcels in Thoothukudi"
                 className="w-full h-full object-cover object-[65%_center] filter brightness-[1.01] contrast-[1.02]"
                 loading="eager"
               />
@@ -193,7 +197,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
           <div className="relative w-full h-[280px] sm:h-[360px] rounded-xl overflow-hidden border border-slate-200/80 shadow-2xs">
             <img
               src="/images/spl-about-thoothukudi.jpg"
-              alt="SPL courier vehicle and cargo parcels at Thoothukudi dispatch station"
+              alt="SPL Worldwide Express courier vehicle and cargo parcels in Thoothukudi"
               className="w-full h-full object-cover object-[65%_center]"
               loading="lazy"
             />

@@ -133,10 +133,10 @@ export const DomesticInternationalPage: React.FC<DomesticInternationalPageProps>
     <div className="w-full bg-white text-spl-navy-deep min-h-screen flex flex-col font-body selection:bg-spl-yellow selection:text-spl-navy-deep">
       {/* Dynamic SEO Meta & Structured Data */}
       <SEOHead
-        title="Domestic & International Courier from Thoothukudi | SPL Worldwide Express"
-        description="Send documents, parcels and business shipments from Thoothukudi across India and to overseas destinations through suitable courier and logistics networks."
+        title="Domestic & International Courier Service | Thoothukudi | SPL"
+        description="SPL Worldwide Express provides domestic courier services across India and international courier solutions from Thoothukudi to destinations worldwide."
         canonicalPath="/domestic-international"
-        keywords="domestic courier thoothukudi, international courier thoothukudi, courier service thoothukudi, parcel delivery across india, overseas courier from thoothukudi, spl worldwide express"
+        keywords="domestic courier thoothukudi, international courier thoothukudi, courier service thoothukudi, courier service across india, international shipping thoothukudi, spl worldwide express"
         breadcrumbs={[
           { name: 'Home', item: '/' },
           { name: 'Domestic & International', item: '/domestic-international' },
@@ -144,30 +144,53 @@ export const DomesticInternationalPage: React.FC<DomesticInternationalPageProps>
         structuredData={[
           {
             '@type': 'Service',
-            'name': 'Domestic Courier Service Thoothukudi',
-            'serviceType': 'Domestic Express Delivery',
+            '@id': 'https://splexpress.in/domestic-international#domestic-courier',
+            'name': 'Domestic Courier Services',
+            'serviceType': 'Domestic Courier & Parcel Delivery',
             'provider': {
               '@type': 'CourierService',
               'name': 'SPL Worldwide Express',
               'url': 'https://splexpress.in/',
+              'telephone': '+91 98945 90600',
+              'address': {
+                '@type': 'PostalAddress',
+                'streetAddress': 'Q4WW+RMQ',
+                'addressLocality': 'Thoothukudi',
+                'addressRegion': 'Tamil Nadu',
+                'postalCode': '628001',
+                'addressCountry': 'IN',
+              },
             },
             'areaServed': {
               '@type': 'Country',
               'name': 'India',
             },
-            'description': 'Doorstep pickup in Thoothukudi with dependable domestic parcel and document delivery across Tamil Nadu and major cities across India.',
+            'description': 'Reliable pan-India domestic parcel delivery and document courier service from Thoothukudi and Tuticorin.',
           },
           {
             '@type': 'Service',
-            'name': 'International Express Courier Thoothukudi',
-            'serviceType': 'International Air Courier',
+            '@id': 'https://splexpress.in/domestic-international#international-courier',
+            'name': 'International Courier Services',
+            'serviceType': 'International Courier & Logistics Coordination',
             'provider': {
               '@type': 'CourierService',
               'name': 'SPL Worldwide Express',
               'url': 'https://splexpress.in/',
+              'telephone': '+91 98945 90600',
+              'address': {
+                '@type': 'PostalAddress',
+                'streetAddress': 'Q4WW+RMQ',
+                'addressLocality': 'Thoothukudi',
+                'addressRegion': 'Tamil Nadu',
+                'postalCode': '628001',
+                'addressCountry': 'IN',
+              },
             },
-            'areaServed': 'Worldwide',
-            'description': 'International air courier service connecting Thoothukudi to USA, UK, UAE, Canada, Australia, Singapore, and Europe through suitable logistics networks.',
+            'areaServed': {
+              '@type': 'Place',
+              'name': 'Worldwide',
+            },
+            'description': 'Worldwide express parcel and document delivery from Thoothukudi to USA, UK, UAE, Canada, Australia, Singapore, Malaysia, Europe and global destinations. SPL Worldwide Express coordinates suitable courier and logistics options through established service networks, including DHL, UPS, FedEx and Aramex, depending on destination, shipment type, service requirements and availability.',
           },
         ]}
       />

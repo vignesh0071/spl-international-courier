@@ -76,10 +76,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
     <div className="w-full bg-[#F8F7F2] text-spl-navy-deep min-h-screen flex flex-col">
       {/* Dynamic SEO Meta & Structured Data */}
       <SEOHead
-        title="Courier Services in Thoothukudi | SPL Worldwide Express"
-        description="Explore domestic and international courier services in Thoothukudi from SPL Worldwide Express, including documents, parcels, personal and business shipments."
+        title="Courier Services in Thoothukudi | Domestic & International | SPL"
+        description="SPL Worldwide Express offers domestic and international courier services in Thoothukudi for documents, parcels, personal shipments, business consignments and commercial shipments."
         canonicalPath="/services"
-        keywords="courier services in thoothukudi, courier service thoothukudi, domestic courier thoothukudi, international courier thoothukudi, parcel delivery thoothukudi, document courier thoothukudi, courier pickup thoothukudi, spl worldwide express"
+        keywords="courier services in thoothukudi, courier service thoothukudi, domestic courier thoothukudi, international courier thoothukudi, parcel delivery thoothukudi, document courier thoothukudi, business courier thoothukudi, courier pickup thoothukudi, spl worldwide express"
         breadcrumbs={[
           { name: 'Home', item: '/' },
           { name: 'Services', item: '/services' },
@@ -87,42 +87,104 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
         structuredData={[
           {
             '@type': 'Service',
-            'name': 'International Courier Service Thoothukudi',
-            'serviceType': 'International Express Courier',
+            '@id': 'https://splexpress.in/services#domestic-courier',
+            'name': 'Domestic Courier Services',
+            'serviceType': 'Domestic Courier & Parcel Delivery',
             'provider': {
               '@type': 'CourierService',
               'name': 'SPL Worldwide Express',
               'url': 'https://splexpress.in/',
-            },
-            'areaServed': 'Worldwide',
-            'description': 'International air courier services from Thoothukudi for documents and parcels to overseas destinations through established courier and logistics networks.',
-          },
-          {
-            '@type': 'Service',
-            'name': 'Domestic Express Courier Service Thoothukudi',
-            'serviceType': 'Domestic Parcel Delivery',
-            'provider': {
-              '@type': 'CourierService',
-              'name': 'SPL Worldwide Express',
-              'url': 'https://splexpress.in/',
+              'telephone': '+91 98945 90600',
+              'address': {
+                '@type': 'PostalAddress',
+                'streetAddress': 'Q4WW+RMQ',
+                'addressLocality': 'Thoothukudi',
+                'addressRegion': 'Tamil Nadu',
+                'postalCode': '628001',
+                'addressCountry': 'IN',
+              },
             },
             'areaServed': {
               '@type': 'Country',
               'name': 'India',
             },
-            'description': 'Reliable domestic courier service from Thoothukudi across India for documents and parcels with express door-to-door delivery.',
+            'description': 'Reliable pan-India domestic parcel delivery and document courier service from Thoothukudi and Tuticorin.',
           },
           {
             '@type': 'Service',
-            'name': 'Courier Pickup Service Thoothukudi',
-            'serviceType': 'Doorstep Courier Collection',
+            '@id': 'https://splexpress.in/services#international-courier',
+            'name': 'International Courier Services',
+            'serviceType': 'International Courier & Logistics Coordination',
             'provider': {
               '@type': 'CourierService',
               'name': 'SPL Worldwide Express',
               'url': 'https://splexpress.in/',
+              'telephone': '+91 98945 90600',
+              'address': {
+                '@type': 'PostalAddress',
+                'streetAddress': 'Q4WW+RMQ',
+                'addressLocality': 'Thoothukudi',
+                'addressRegion': 'Tamil Nadu',
+                'postalCode': '628001',
+                'addressCountry': 'IN',
+              },
             },
-            'areaServed': 'Thoothukudi',
-            'description': 'Doorstep courier pickup and packaging coordination across Thoothukudi for documents, parcels, and business shipments.',
+            'areaServed': {
+              '@type': 'Place',
+              'name': 'Worldwide',
+            },
+            'description': 'Worldwide express parcel and document delivery from Thoothukudi to USA, UK, UAE, Canada, Australia, Singapore, Malaysia, Europe and global destinations. SPL Worldwide Express coordinates suitable courier and logistics options through established service networks, including DHL, UPS, FedEx and Aramex, depending on destination, shipment type, service requirements and availability.',
+          },
+          {
+            '@type': 'Service',
+            '@id': 'https://splexpress.in/services#documents-parcels',
+            'name': 'Document & Parcel Delivery',
+            'serviceType': 'Document & Parcel Delivery',
+            'provider': {
+              '@type': 'CourierService',
+              'name': 'SPL Worldwide Express',
+              'url': 'https://splexpress.in/',
+              'telephone': '+91 98945 90600',
+              'address': {
+                '@type': 'PostalAddress',
+                'streetAddress': 'Q4WW+RMQ',
+                'addressLocality': 'Thoothukudi',
+                'addressRegion': 'Tamil Nadu',
+                'postalCode': '628001',
+                'addressCountry': 'IN',
+              },
+            },
+            'areaServed': [
+              { '@type': 'City', 'name': 'Thoothukudi' },
+              { '@type': 'City', 'name': 'Tuticorin' },
+              { '@type': 'Country', 'name': 'India' },
+            ],
+            'description': 'Convenient doorstep courier pickup, secure packaging coordination, and express transit for urgent documents and personal parcels from Thoothukudi.',
+          },
+          {
+            '@type': 'Service',
+            '@id': 'https://splexpress.in/services#business-commercial',
+            'name': 'Business & Commercial Shipments',
+            'serviceType': 'Commercial Courier & Cargo Dispatch',
+            'provider': {
+              '@type': 'CourierService',
+              'name': 'SPL Worldwide Express',
+              'url': 'https://splexpress.in/',
+              'telephone': '+91 98945 90600',
+              'address': {
+                '@type': 'PostalAddress',
+                'streetAddress': 'Q4WW+RMQ',
+                'addressLocality': 'Thoothukudi',
+                'addressRegion': 'Tamil Nadu',
+                'postalCode': '628001',
+                'addressCountry': 'IN',
+              },
+            },
+            'areaServed': [
+              { '@type': 'Country', 'name': 'India' },
+              { '@type': 'Place', 'name': 'Worldwide' },
+            ],
+            'description': 'Commercial courier dispatch, sample shipping, and cargo logistics for businesses and commercial consignments in Thoothukudi.',
           },
           {
             '@type': 'FAQPage',
@@ -155,7 +217,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             >
               <img
                 src="/images/spl-services-hero.jpg"
-                alt="SPL Worldwide Express parcel sorting and dispatch preparation"
+                alt="SPL Worldwide Express parcel sorting and dispatch preparation in Thoothukudi"
                 className="w-full h-full object-cover object-[center_35%] filter brightness-[1.01] contrast-[1.02]"
                 loading="eager"
               />
@@ -229,7 +291,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
           <div className="relative w-full h-[280px] sm:h-[360px] rounded-xl overflow-hidden border border-slate-200 shadow-2xs">
             <img
               src="/images/spl-services-hero.jpg"
-              alt="SPL Worldwide Express parcel sorting and dispatch preparation"
+              alt="SPL Worldwide Express parcel sorting and dispatch preparation in Thoothukudi"
               className="w-full h-full object-cover object-[center_35%]"
               loading="lazy"
             />
@@ -330,7 +392,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             <div className="relative w-full h-[300px] sm:h-[380px] rounded-[4px] overflow-hidden border border-slate-200/90 shadow-2xs">
               <img
                 src="/images/spl-domestic-courier.jpg"
-                alt="Domestic express courier delivery staff and vehicle"
+                alt="Domestic express courier parcel delivery service in Thoothukudi"
                 className="w-full h-full object-cover object-[center_35%]"
                 loading="lazy"
               />
@@ -349,7 +411,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             <div className="relative w-full h-[280px] sm:h-[380px] rounded-[4px] overflow-hidden border border-slate-200/90 shadow-2xs">
               <img
                 src="/images/spl-international-air.jpg"
-                alt="International air cargo export parcels at freight terminal"
+                alt="International air courier cargo shipment dispatch from Thoothukudi"
                 className="w-full h-full object-cover object-[center_40%]"
                 loading="lazy"
               />
@@ -492,7 +554,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             <div className="relative w-full h-[300px] sm:h-[380px] rounded-[4px] overflow-hidden border border-slate-200/90 shadow-2xs">
               <img
                 src="/images/spl-business-cargo.jpg"
-                alt="Commercial B2B logistics warehouse palletized export boxes"
+                alt="Commercial logistics and business courier shipment dispatch from Thoothukudi"
                 className="w-full h-full object-cover object-[center_35%]"
                 loading="lazy"
               />
@@ -511,7 +573,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             <div className="relative w-full h-[280px] sm:h-[380px] rounded-[4px] overflow-hidden border border-slate-200/90 shadow-2xs">
               <img
                 src="/images/spl-documents-fragile.jpg"
-                alt="Documents and parcel courier packaging"
+                alt="Document courier and parcel express packaging in Thoothukudi"
                 className="w-full h-full object-cover object-[center_40%]"
                 loading="lazy"
               />

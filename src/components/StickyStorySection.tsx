@@ -261,7 +261,7 @@ export const StickyStorySection: React.FC = () => {
         <img
           ref={imageRef}
           src="/images/spl-di-shipment-journey.jpg"
-          alt="SPL shipment preparation and dispatch coordination"
+          alt="SPL Worldwide Express shipment preparation and dispatch coordination in Thoothukudi"
           className="absolute inset-0 w-full h-full object-cover will-change-transform object-[80%_44%] lg:object-[60%_35%]"
         />
 

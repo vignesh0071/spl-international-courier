@@ -159,7 +159,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal, onViewServices }
           >
             <img
               src="/images/spl-hero-logistics.jpg"
-              alt="SPL International Courier Solution logistics operations"
+              alt="SPL Worldwide Express courier parcel delivery and cargo shipment handling in Thoothukudi"
               className="w-full h-full object-cover object-[center_35%]"
               loading="eager"
             />
